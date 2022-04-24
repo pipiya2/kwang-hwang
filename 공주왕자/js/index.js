@@ -1,5 +1,10 @@
 $(document).ready(function(){
-    // console.log($(location).attr('pathname'))
-    // console.log($(location).attr('href'))
+    let meetDate = new Date('June 26 2021');
+    let today = new Date();
+    
+    let passedTime = today.getTime()-meetDate.getTime();
+    let passedDate = Math.round(passedTime/(24*60*60*1000));
+
+    $("#present").html(passedDate);
 
 })
